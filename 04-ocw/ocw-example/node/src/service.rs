@@ -71,6 +71,7 @@ pub fn new_partial(
 
 	let keystore = keystore_container.sync_keystore();
 	if config.offchain_worker.enabled {
+		// FIXME: 如果OCW开关是打开的话，便会新插入一个Alice的账号
 		// Initialize seed for signing transaction using off-chain workers. This is a convenience
 		// so learners can see the transactions submitted simply running the node.
 		// Typically these keys should be inserted with RPC calls to `author_insertKey`.
